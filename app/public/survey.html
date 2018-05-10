@@ -17,26 +17,49 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
+  <style>
+  h3{
+    font-size: 50px;
+    align-content: center;
+    color: azure;
+  }
+
+  h4{
+    clear: left;
+    font-size: 30px;
+    color: azure;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  a{
+    color: red;
+  }
+
+  </style>
+
 </head>
 
-<body>
+<body style="background-image: url(http://cdn2us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2017/04/wheel-of-time-robert-jordan.jpg?itok=ETmGS696)">
 
   <div class="container">
 
-    <h2>Survey Questions</h2>
+    <h2 class="d-flex justify-content-between">Survey Questions</h2>
     <hr>
 
     <h3><strong>About You</strong></h3>
     <h4>Name (Required)</h4>
     <input type="text" id="name" class="form-control" required>
 
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
+    <h4>Link to Photo Image (Not Required because I don't base my friendships on appearances)</h4>
+    <input type="text" id="photo" class="form-control">
 
     <hr>
 
     <h3><strong>Question 1</strong></h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h4>Your favorite band comes from the 80's.</h4>
     <select class="chosen-select" id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -47,7 +70,7 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <h4>Generally speaking, you rely on google to finalize any debate.</h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -59,7 +82,7 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <h4>You enjoy working outside more than sitting at a desk.</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -71,7 +94,7 @@
 
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <h4>You rarely read a book unless it's an audio book.</h4>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -83,7 +106,7 @@
 
 
     <h3><strong>Question 5</strong></h3>
-    <h4>People can rarely upset you.</h4>
+    <h4>People that enjoy cardio are foreign to you.</h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +118,7 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <h4>It is often difficult for you to relate to people that don't enjoy cartoons and fantasy books.</h4>
     <select class="chosen-select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -107,7 +130,7 @@
 
 
     <h3><strong>Question 7</strong></h3>
-    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <h4>In a discussion, making sure people see your point of view is the objective.</h4>
     <select class="chosen-select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -118,7 +141,7 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <h4>You find it's easier to get things done when you drink lots of caffeine.</h4>
     <select class="chosen-select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -129,7 +152,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+    <h4>You think that three best fantasy series are Eragon, Lord of the Rings and The Wheel of Time.</h4>
     <select class="chosen-select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -140,7 +163,7 @@
     </select>
 
     <h3><strong>Question 10</strong></h3>
-    <h4>You feel more energetic after spending time with a group of people.</h4>
+    <h4>You feel inclined to avoid hanging out with people because it's a waste of energy.</h4>
     <select class="chosen-select" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>

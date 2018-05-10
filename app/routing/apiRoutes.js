@@ -16,14 +16,17 @@ app.post("/api/friends", function (req, res) {
 
     res.json(friendsArray);
 
-    for(var i = 0; i < friendsArray.length; i++){
-        var userScores = friendsArray.scores[i];
-        for(var j = 0; j < userScores.length; j++){
-            parseInt(userScores);
-        }
-    }
+    var userScoresArr = friendsArray[0].scores;
 
-    console.log(userScores);
+    console.log(userScoresArr);
+
+
+    // for(var i = 0; i < friendsArray.length; i++){
+    //     var userScores = friendsArray.scores[i];
+    //     for(var j = 0; j < userScores.length; j++){
+    //         parseInt(userScores);
+    //     }
+    // }
 
     // for(var i = 0; i < friendsArray.length; i++){
     //     console.log()
