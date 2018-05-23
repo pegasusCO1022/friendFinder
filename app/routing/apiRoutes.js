@@ -1,43 +1,47 @@
 // Displays friends array list 
-var friendsArray = require("../data/friends.js")
+var friends = require("../data/friends.js")
 
 module.exports = function (app){
 
 
 app.get("/api/friends", function (req, res) {
-    return res.json(friendsArray);
+    return res.json(friends);
 });
 
 app.post("/api/friends", function (req, res) {
     
-    let surveyResults = req.body;
+    let userScores = req.body;
 
-    friendsArray.push(surveyResults);
+    friends.push(userScores);
 
-    res.json(friendsArray);
+    res.json(userScores);
 
-    var userScoresArr = friendsArray[0].scores;
+    var userScoresArr = req.body.scores;
 
-    console.log(userScoresArr);
+    var bestMatch = {
+        name: "",
+        photo: "",
+        scores: Infinity
+    }
+    var scoresArray = [];
 
 
-    // for(var i = 0; i < friendsArray.length; i++){
-    //     var userScores = friendsArray.scores[i];
-    //     for(var j = 0; j < userScores.length; j++){
-    //         parseInt(userScores);
-    //     }
-    // }
+    for(var i = 0; i < friends.length; i++){
+          var scoresDiff = 0;
+        for(var j = 0; j < userScoresArr.length; j++){
+            scoresDiff += (Math.abs(parseInt(friends[i].scores[j] - parseInt(userScoresArr[j]))));
+        }
+        scoresArray.push(scoresDiff);
+    }
 
-    // for(var i = 0; i < friendsArray.length; i++){
-    //     console.log()
-    //     }
+    for(var i=0; i<scoresArray.length; i++){
+        if(scoresArray[i] <= scoresArray[bestMatch]){
+            bestMatch = i;
+        }
+    }
 
-    // }
-    // loop through friends array (nested array)
-    // go through each friend first array (nested array for scores)
-    // math.abs absolute difference
-    // new array for scores and compare scores
-    // res.json new friend object
+    var bestFriend = friends[bestMatch];
+    res.json(bestFriend);
 
    
 });
